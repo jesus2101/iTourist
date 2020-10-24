@@ -1,0 +1,42 @@
+<ion-header>
+  
+  <ion-toolbar color="danger">
+    
+    <ion-title class="colortexto"><b>Inicio</b></ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarPop($event)">
+        <ion-icon name="menu" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+
+<ion-slides class="slide-full" #mySlider [options]="slideOptions" (ionSlidesDidLoad)="slidesDidLoad(mySlider)" pager="true">
+<ion-slide *ngFor="let evento of eventos">
+  <ion-card>
+  <div class="slide-img-padding">
+    <img [src]="evento.img" />
+</div>
+<ion-card-header >
+  <ion-card-title color="success">
+{{evento.descripcion}}
+</ion-card-title>
+</ion-card-header>
+<ion-card-content>
+  <ion-button (click)="openDirec(evento.url)">Ir al Sitio</ion-button>
+</ion-card-content>
+</ion-card>
+</ion-slide>
+</ion-slides>
+
+
+
+</ion-content>
+<ion-footer>
+    <ion-toolbar color="danger">
+        <h5 style="text-align:center; margin-top:0px;"><b>© 2019 Yizus Apps</b></h5>
+    </ion-toolbar>
+  </ion-footer>

@@ -1,6 +1,8 @@
 {
   "name": "itourist",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
   "id": "bd6fa04a"
 }
